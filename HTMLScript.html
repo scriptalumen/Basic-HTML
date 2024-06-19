@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+     Example  Script with the  document API
+    </title>
+
+  </head>
+  <script type="text/javascript">
+      function textchecker() {
+          var textField1 = document.getElementById('textField1');
+          if (textField1.value == "") {
+          alert("Please type in the field");
+          } else {
+            alert("You entered: " + textField1.value);
+          }
+      }
+  </script>
+  <body>
+    <input type='text' id='textField1'>
+    <input type='button' onClick='textchecker()' value='Submit'>
+
+  </body>
+</html> 
