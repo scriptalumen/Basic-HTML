@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Special HTML Elements
+
+        </title>
+    </head>
+    <style>
+       
+        canvas {
+            display: block;
+            background-color: #f0f0f0;
+        }
+
+    </style>
+    <body>
+
+        <!-- Non HTML5 Specific Tags -->
+        <div>
+          <h1>This is a heading in a div element</h1>
+          <p>This is some text in a div element.</p>
+        </div>
+
+
+        <!-- Structural HTML5 Elements    -->
+        <section>
+      	    <h1>Section 1</h1>
+            <p>This is text related to section 1.</p>
+        </section>
+           	
+        <section>
+            <h1>Section 2</h1>
+          	<p>This is some text related to section 2.</p>
+        </section>
+
+
+        <article>
+            <header>
+               <h1>G8 summit protests</h1>
+            </header>
+            <div>
+               <section id="public">
+                    <h1>Public demonstrations</h1>
+                    <p>...more...</p>                
+               </section>
+               <section id="control">
+                    <h1>Crowd control</h1>
+                    <p>...more...</p>                
+               </section>            
+            </div>
+            <footer>
+                <p>Published today.</p>
+            </footer>
+        </article>
+
+        <!-- HTML5 Elements for Grouping -->
+        <p>This is a paragraph of text that casually mentions a concept and continues explaining the main point</p>
+	
+        <aside>
+            <h4>Concept Definition</h4>
+            <p>This goes over the concept mentioned in the paragraph to provide readers with further explanation if needed. However, it does not detract from the main content.</p>
+        </aside>
+
+        <figure>
+            <img src="./media/image/bear.png" width="500" height="500"/>
+            <figcaption>Happy Birthday To You</figcaption>
+        </figure>
+
+
+        <!-- Navigational Elements -->
+        <nav>
+           <div class="menu">
+             <a href="#">Home</a> |
+             <a href="#about">About</a> |
+             <a href="#register">Register</a> |
+             <a href="#">Sign in</a>
+           </div>
+        </nav>
+
+
+        <!-- Additional HTML5 Elements -->
+            <!-- Embedding Content -->
+            <audio controls>
+                <source src="./media/audio/Blue Monkey Music - Happy Birthday.mp3" type="audio/mpeg">
+                <!-- <source src="soundtrack.ogg" type="audio/ogg"> -->
+                
+               Your browser does not support the audio formats provided.
+            </audio>
+
+            <video controls width="640" height="360">
+                <source src="./media/video/Happy Birthday.mp4" type="video/mp4">
+                <!-- Add more source elements for other formats (e.g., WebM, OGG) -->
+                Your browser does not support the video tag.
+            </video>
+
+
+            
+
+            <canvas id="myCanvas" width="300" height="300"></canvas>
+
+            <script>
+                const canvas = document.getElementById("myCanvas");
+                const context = canvas.getContext("2d");
+
+                // Draw a colorful gradient rectangle
+                const gradient = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+                gradient.addColorStop(0, "#ff6699");
+                gradient.addColorStop(1, "#66ccff");
+                context.fillStyle = gradient;
+                context.fillRect(50, 50, 200, 150);
+
+                // Draw a circle
+                context.beginPath();
+                context.arc(150, 125, 40, 0, 2 * Math.PI);
+                context.fillStyle = "#ffcc00";
+                context.fill();
+
+                // Add some text
+                context.font = "24px Arial";
+                context.fillStyle = "#333";
+                context.fillText("Canvas Art", 80, 30);
+
+                // Create a line
+                context.strokeStyle = "#009933";
+                context.lineWidth = 3;
+                context.beginPath();
+                context.moveTo(50, 200);
+                context.lineTo(250, 200);
+                context.stroke();
+            </script>
+                        
+            <!-- <script src="./assets/js/SpecialHTMLElements.js"></script> -->
+
+                
+            
+            
+
+            
+            
+    </body>
+</html>
