@@ -1,4 +1,5 @@
-**What is JSFiddle?**
+# What is JSFiddle?
+
 JSFiddle serves as a versatile platform tailored for web development enthusiasts at all skill levels.
 It's an online tool that facilitates experimentation with HTML, CSS, and JavaScript code.
 The real-time feedback feature allows you to observe the effects of your code modifications instantly.
